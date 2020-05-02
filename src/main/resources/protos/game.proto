@@ -1,0 +1,35 @@
+syntax = "proto3";
+option java_multiple_files = true;
+option java_package = "com.paithan.deathgate.proto";
+
+
+message Card {
+    string cardId = 1;
+    int32 idInDeck = 2;
+}
+
+message Player {
+    string player_id = 1;
+    repeated Card hand = 2;
+    int32 life = 3;
+    repeated Card graveyard = 4;
+    repeated Card battlefield = 5;
+}
+
+message GameStatusResponse {
+    repeated Player players = 1;
+    bool isGameFinished = 3;
+}
+
+message StartGameRequest {}
+
+
+message PlayCardRequest {
+    Card card =1;
+}
+
+
+service GameService {
+    rpc startGame (StartGameRequest) returns (GameStatusResponse);
+    rpc playCard (PlayCardRequest) returns (GameStatusResponse);
+}

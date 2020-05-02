@@ -1,0 +1,22 @@
+HE-0001:
+  name: High Elves Spearman
+  type: creature
+  strength: 1
+  defense: 1
+  cost:
+    - magic_tower: 1
+  skills: brotherhoood
+HE-0002:
+  name: Magic Tower
+  type: source
+D-0001:
+  name: Dwarves hammerers
+  type: creature
+  strength: 1
+  defense: 1
+  cost:
+    - magic_tower: 1
+  skills: stubborn
+D-0002:
+  name: Mountain Mine
+  type: source
